@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility, CSS Custom Property and Calc</title>
+    <style>
+        /* visibility: hidden Vs display: none */
+        .box{
+            width: 150px;
+            height: 150px;
+            border: 2px solid purple;
+        }
+        #box-1{
+            display: none;
+        }
+        #box-3{
+            visibility: hidden;
+        }
+        /* CSS Custom Property and Calc */
+        :root{
+            --primary-color: green;
+            --secondary-color: red;
+            --single-border: 1px solid red;
+        }
+        .title-1{
+            color: var(--primary-color);
+        }
+        .title-2{
+            color: var(--secondary-color);
+            border-bottom: var(--single-border);
+        }
+        .calc{
+            border: var(--single-border);
+        }
+        h1{
+            background-color: var(--primary-color);
+            border: var(--single-border);
+            height: 50px;
+            width: calc(100% - 300px);
+        }
+    </style>
+</head>
+<body>
+    <!-- 7(Visibility: hidden Vs display: none, CSS Custom Property and Calc) -->
+    <div class="box" id="box-1">
+        <h3>Box-1</h3>
+    </div>
+    <div class="box" id="box-2">
+        <h3>Box-2</h3>
+    </div>
+    <div class="box" id="box-3">
+        <h3>Box-3</h3>
+    </div>
+    <div class="box" id="box-4">
+        <h3>Box-4</h3>
+    </div>
+    <!-- CSS Custom Property and Calc -->
+    <h3 class="title-1">Lorem ipsum dolor sit amet.</h3>
+    <h3 class="title-2">Aperiam delectus distinctio soluta voluptatem!</h3>
+    <div class="calc"><h1>Lorem ipsum dolor sit amet.</h1></div>
+
+    <!-- 8(CSS Specificity) -->
+        <p>Specificity order: External css > Internal/Embedded css > Class > Id > Inline css > !important</p>
+
+        <!-- 9(Devtool Browser Inspect) -->
+         <!-- Go to website > right click > inspect -->
+</body>
+</html>
